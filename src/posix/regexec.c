@@ -43,7 +43,7 @@ static char sccsid[] = "@(#)regexec.c	8.3 (Berkeley) 3/20/94";
 /*
  * the outer shell of regexec()
  *
- * This file includes engine.c *twice*, after muchos fiddling with the
+ * This file includes engine.h *twice*, after muchos fiddling with the
  * macros that code uses.  This lets the same code operate on two different
  * representations for state sets.
  */
@@ -85,9 +85,9 @@ static int nope = 0;		/* for use in asserts; shuts lint up */
 #define	BACK(dst, src, n)	((dst) |= ((unsigned long)(src)&(here)) >> (n))
 #define	ISSETBACK(v, n)	(((v) & ((unsigned long)here >> (n))) != 0)
 /* function names */
-#define SNAMES			/* engine.c looks after details */
+#define SNAMES			/* engine.h looks after details */
 
-#include "engine.c"
+#include "engine.h"
 
 /* now undo things */
 #undef	states
@@ -136,7 +136,7 @@ static int nope = 0;		/* for use in asserts; shuts lint up */
 /* function names */
 #define	LNAMES			/* flag */
 
-#include "engine.c"
+#include "engine.h"
 
 /*
  - regexec - interface for matching

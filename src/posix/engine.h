@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	@(#)engine.c	8.5 (Berkeley) 3/20/94
+ *	@(#)engine.h	8.5 (Berkeley) 3/20/94
  */
 
 #include <sys/cdefs.h>
@@ -88,7 +88,7 @@ struct match {
 extern "C" {
 #endif
 
-/* === engine.c === */
+/* === engine.h === */
 static int matcher(struct re_guts *g, char *string, size_t nmatch, regmatch_t pmatch[], int eflags);
 static char *dissect(struct match *m, char *start, char *stop, sopno startst, sopno stopst);
 static char *backref(struct match *m, char *start, char *stop, sopno startst, sopno stopst, sopno lev);
