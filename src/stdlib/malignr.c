@@ -1,3 +1,3 @@
 #define INTERNAL_NEWLIB
-#define DEFINE_MALLOC
+#define DEFINE_MEMALIGN
 #include "mallocr.h"
