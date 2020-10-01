@@ -3,7 +3,7 @@
 /* execlp.c */
 
 /* This and the other exec*.c files in this directory require 
-   the target to provide the _execve syscall.  */
+   the target to provide the execve syscall.  */
 
 #include <_ansi.h>
 #include <unistd.h>

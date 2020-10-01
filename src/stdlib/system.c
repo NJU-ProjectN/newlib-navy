@@ -40,7 +40,7 @@ a command processor.
 POSIX.2 requires <<system>>, and requires that it invoke a <<sh>>.
 Where <<sh>> is found is left unspecified.
 
-Supporting OS subroutines required: <<_exit>>, <<_execve>>, <<_fork_r>>,
+Supporting OS subroutines required: <<_exit>>, <<execve>>, <<_fork_r>>,
 <<_wait_r>>.
 */
 
@@ -121,7 +121,7 @@ do_system (struct _reent *ptr,
 
   if ((pid = _fork_r (ptr)) == 0)
     {
-      _execve ("/bin/sh", argv, *p_environ);
+      execve ("/bin/sh", argv, *p_environ);
       exit (100);
     }
   else if (pid == -1)
@@ -160,7 +160,7 @@ do_system (struct _reent *ptr,
       char *sh = getenv ("SH_PATH");
       if (sh == NULL)
 	sh = "/bin/sh";
-      _execve (sh, argv, environ);
+      execve (sh, argv, environ);
       exit (100);
     }
   else if (pid == -1)

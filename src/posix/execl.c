@@ -3,7 +3,7 @@
 /* execl.c */
 
 /* This and the other exec*.c files in this directory require 
-   the target to provide the _execve syscall.  */
+   the target to provide the execve syscall.  */
 
 #include <_ansi.h>
 #include <unistd.h>
@@ -34,6 +34,6 @@ execl (const char *path,
   while (argv[i++] != NULL);
   va_end (args);
 
-  return _execve (path, (char * const  *) argv, *p_environ);
+  return execve (path, (char * const  *) argv, *p_environ);
 }
 #endif /* !_NO_EXECVE  */

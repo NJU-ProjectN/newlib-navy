@@ -81,7 +81,7 @@ PORTABILITY
 POSIX.1-2008 requires <<posix_spawn>> and <<posix_spawnp>>.
 
 Supporting OS subroutines required: <<_close>>, <<dup2>>, <<_fcntl>>,
-<<_execve>>, <<execvpe>>, <<_exit>>, <<_open>>, <<sigaction>>,
+<<execve>>, <<execvpe>>, <<_exit>>, <<_open>>, <<sigaction>>,
 <<sigprocmask>>, <<waitpid>>, <<sched_setscheduler>>,
 <<sched_setparam>>, <<setegid>>, <<seteuid>>, <<setpgid>>, <<vfork>>.
 */
@@ -281,7 +281,7 @@ do_posix_spawn(pid_t *pid, const char *path,
 		if (use_env_path)
 			execvpe(path, argv, envp != NULL ? envp : *p_environ);
 		else
-			_execve(path, argv, envp != NULL ? envp : *p_environ);
+			execve(path, argv, envp != NULL ? envp : *p_environ);
 		error = errno;
 		_exit(127);
 	default:
