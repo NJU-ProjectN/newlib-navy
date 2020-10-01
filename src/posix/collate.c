@@ -28,7 +28,7 @@
 #include <sys/cdefs.h>
 
 #include "namespace.h"
-#include <rune.h>
+#include "rune.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
