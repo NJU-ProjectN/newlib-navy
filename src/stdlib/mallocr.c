@@ -186,7 +186,7 @@ int _dummy_mallocr = 1;
      memcpy called in realloc and calloc (otherwise macro versions are used). 
      At least on some platforms, the simple macro versions usually
      outperform libc versions.
-  HAVE_MMAP                 (default: defined as 1)
+  HAVE_MMAP                 (default: defined as 0)
      Define to non-zero to optionally make malloc() use mmap() to
      allocate very large blocks.  
   HAVE_MREMAP                 (default: defined as 0 unless Linux libc set)
@@ -610,7 +610,7 @@ do {                                                                          \
 */
 
 #ifndef HAVE_MMAP
-#define HAVE_MMAP 1
+#define HAVE_MMAP 0
 #endif
 
 /*
