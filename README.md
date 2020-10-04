@@ -25,6 +25,8 @@
     * 创建svfiscanf.c  svfscanf.c  vfiscanf.c  vfscanf.c
   * stdio/vfwscanf.c -> stdio/vfwscanf.h
     * 创建svfiwscanf.c  svfwscanf.c  vfiwscanf.c  vfwscanf.c
+  * stdio/vfwprintf.c -> stdio/vfwprintf.h
+    * 创建svfiwprintf.c  svfwprintf.c  vfiwprintf.c  vfwprintf.c
   * stdlib/mallocr.c -> stdlib/mallocr.h
     * 创建callocr.c  cfreer.c  freer.c  malignr.c  mallinfor.c  mallocr.c  malloptr.c  mallstatsr.c  msizer.c  pvallocr.c  reallor.c  vallocr.c
 * 添加platform/cpp.cpp作为C++的最小运行时环境
