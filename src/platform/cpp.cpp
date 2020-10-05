@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <assert.h>
 
+long __dso_handle = 0;
+
 extern "C" {
 
 void __cxa_pure_virtual() {
