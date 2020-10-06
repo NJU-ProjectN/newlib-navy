@@ -287,10 +287,8 @@
 #endif
 #endif
 
-#ifdef _WANT_USE_LONG_TIME_T
 #ifndef _USE_LONG_TIME_T
 #define _USE_LONG_TIME_T
-#endif
 #endif
 
 /* If _MB_EXTENDED_CHARSETS_ALL is set, we want all of the extended
