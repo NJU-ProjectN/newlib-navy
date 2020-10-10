@@ -15,6 +15,14 @@ double cos(double x) {
   assert(0);
 }
 
+double tan(double x) {
+  assert(0);
+}
+
+double sqrt(double x) {
+  assert(0);
+}
+
 double pow(double x, double y) {
   assert(0);
 }
@@ -28,5 +36,9 @@ double round(double x) {
 }
 
 double floor(double x) {
+  assert(0);
+}
+
+double ceil(double x) {
   assert(0);
 }
