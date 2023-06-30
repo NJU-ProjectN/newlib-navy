@@ -1,4 +1,4 @@
-#if defined(__ISA_RISCV32__) || defined(__ISA_RISCV64__)
+#ifdef __riscv
 /* Copyright (c) 2017  SiFive Inc. All rights reserved.
 
    This copyrighted material is made available to anyone wishing to use,
