@@ -377,6 +377,11 @@ _BEGIN_STD_C
 #endif
 #endif
 
+#ifdef __loongarch32r
+#define _JBLEN  13 // This number should be based on the actual registers to save
+#define _JBTYPE unsigned int  // Assuming a 32-bit integer for the buffer type
+#endif
+
 #ifdef _JBLEN
 #ifdef _JBTYPE
 typedef	_JBTYPE jmp_buf[_JBLEN];
